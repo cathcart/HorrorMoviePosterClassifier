@@ -12,7 +12,7 @@ Once downloaded the details for each movie along with our calculated colour-frac
 ```
 movie_list = ["The Ring", "Poltergeist", "The Exorcist", "Forrest Gump", "The Sound of Music", "Casablanca"]
 ```
-Larger lists will give more accurate results. An easy way to get large lists is to search for [imdb user lists](https://www.google.ie/search?q=g+horror+site%3Aimdb.com%2Flists&oq=g+horror+site%3Aimdb.com%2Flists&aqs=chrome..69i57j69i64l2.14941j0j1&sourceid=chrome&es_sm=91&ie=UTF-8#q=horror+site:imdb.com%2Flists) and parse the resulting RSS feeds to get a list of movie names. 
+   Larger lists will give more accurate results. An easy way to get large lists is to search for [imdb user lists](https://www.google.ie/search?q=g+horror+site%3Aimdb.com%2Flists&oq=g+horror+site%3Aimdb.com%2Flists&aqs=chrome..69i57j69i64l2.14941j0j1&sourceid=chrome&es_sm=91&ie=UTF-8#q=horror+site:imdb.com%2Flists) and parse the resulting RSS feeds to get a list of movie names. 
 
 2. The database can then be initialised. 
 ```
