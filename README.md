@@ -8,28 +8,28 @@ To classify an unknown movie poster we extract these colour-fraction vectors usi
 ###Additional details
 Once downloaded the details for each movie along with our calculated colour-fraction vectors are saved in a redis database. This is to speed up repeat calculations and minimise the number of API calls to RottenTomatoes. Posters are also saved to the hard-disk so that in the event the user wishes to change the number of colour-fraction vectors used to approximate each poster no additional downloads are necessary. 
 ###Running
-1. Setup the database first create a list of movie names. 
+* Setup the database first create a list of movie names. 
 ```
 movie_list = ["The Ring", "Poltergeist", "The Exorcist", "Forrest Gump", "The Sound of Music", "Casablanca"]
 ```
    Larger lists will give more accurate results. An easy way to get large lists is to search for [imdb user lists](https://www.google.ie/search?q=g+horror+site%3Aimdb.com%2Flists&oq=g+horror+site%3Aimdb.com%2Flists&aqs=chrome..69i57j69i64l2.14941j0j1&sourceid=chrome&es_sm=91&ie=UTF-8#q=horror+site:imdb.com%2Flists) and parse the resulting RSS feeds to get a list of movie names. 
 
-2. The database can then be initialised. 
+* The database can then be initialised. 
 ```
 d = Database(movie_list)
 ```
 This will work itself though the list searching first for results on the redis server given before querying RottenTomatoes.
 
-3. Suitable parameters, the number of clusters and nearest neighbours, are estimated and the database is trained searching for movies with the keyword `horror`.
+* Suitable parameters, the number of clusters and nearest neighbours, are estimated and the database is trained searching for movies with the keyword `horror`.
 ```
 d.cross_validation("horror")
 ```
-4. An estimate of the accuracy of the database can be obtained using.
+* An estimate of the accuracy of the database can be obtained using.
 ```
 d.test()
 ```
 This also prints the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix).
-5. Individual movies can be tested with a simple get call to the database.
+* Individual movies can be tested with a simple get call to the database.
 ```
 d["Gladiator"]
 d["Titanic"]
