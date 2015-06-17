@@ -267,8 +267,3 @@ if __name__=="__main__":
 	d = Database(get_rss(horror_lista)+get_rss(horror_listb)+get_rss(empire_list), replace=False)
 	d.cross_validation("horror")
 	d.test()
-	print d["the ring"]
-	print d["toy story 3"]
-	print d["little mermaid"]
-	print d["driving miss daisy"]
-	print d["drive"]
