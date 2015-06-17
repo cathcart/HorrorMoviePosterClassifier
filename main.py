@@ -1,19 +1,20 @@
-import math
 import redis
+from PIL import Image
+import numpy as np
+import math
 import os
 import urllib
 import json
 import requests
-from PIL import Image
 from StringIO import StringIO
-import numpy as np
 import random
 from xml.etree import ElementTree as etree
 import time
 
+#redis host added through enviormental variables
 redis_host = os.environ['DB_PORT_6379_TCP_ADDR']
+#rotten tomatoes api key held in file 'api.key'
 api_key = file("api.key").read().strip("\n")
-
 
 class Movie(object):
 	def __init__(self, name, replace=False):
