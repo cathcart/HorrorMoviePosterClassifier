@@ -1,6 +1,6 @@
 # HorrorMoviePosterClassifier
 ### Background
-Throughout the history of cinema movie posters have been used capture and sell the mood of a film. Whether it's an action-adventure, romantic-comedy or sci-fi horror movie genres have developed their own visual language to communicate to audiences. This project is my attempt to see if, via simple machine learning, computers can tap into this language. 
+Throughout the history of cinema movie posters have been used to capture and sell the mood of a film. Whether it's an action-adventure, romantic-comedy or sci-fi horror movie genres have developed their own visual language to communicate to audiences. This project is my attempt to see if, via simple machine learning, computers can tap into this language. 
 ### Method
 From a list of movies containing roughly equal numbers of horror and non-horror movies we download the movie details, such as which genres it belongs to, and poster images from [RottenTomatoes](http://developer.rottentomatoes.com/). Using [k-medoids](https://en.wikipedia.org/wiki/K-medoids) clustering we group the image pixels via colour value and calculate the fraction of the total number of pixels contained in each cluster. This gives us a reasonable idea of the colours used in each poster as well as their relative importance. Is the poster mainly black with white highlights or white with black text? 
 
@@ -18,7 +18,7 @@ movie_list = ["The Ring", "Poltergeist", "The Exorcist", "Forrest Gump", "The So
 ```
 d = Database(movie_list)
 ```
-This will work itself though the list searching first for results on the redis server given before querying RottenTomatoes.
+This will work itself through the list searching first for results on the redis server given before querying RottenTomatoes.
 
 * Suitable parameters, the number of clusters and nearest neighbours, are estimated and the database is trained searching for movies with the keyword `horror`.
 ```
@@ -33,7 +33,7 @@ This also prints the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_
 ```
 d["Gladiator"]
 d["Titanic"]
-d["The girl with the perl earring"]
+d["The girl with a perl earring"]
 ```
 ### Dependencies
 *redis
