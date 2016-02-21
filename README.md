@@ -33,7 +33,7 @@ This also prints the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_
 ```
 d["Gladiator"]
 d["Titanic"]
-d["The girl with a perl earring"]
+d["Girl with a Pearl Earring"]
 ```
 ### Dependencies
 *redis
